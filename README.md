@@ -1,56 +1,102 @@
-# Network File System (NFS)
+# ThreadIt
 
-## Functionality
+![ThreadIt GIF](https://cdn.dribbble.com/users/1894420/screenshots/11700268/online-video-chat.gif)
 
-1. **Create**: Create files and folders.
-   - Client Side: Establish connection with NM, prompt user for action, send Create Request, and receive response.
-   - NM Side: Receive Create Request, send CREATE request to SS, handle CREATE_BACKUP requests, and send response to client.
-   - SS Side: Initialize, check root folder, register paths, handle CREATE requests, and respond to NM.
+## Overview
 
-2. **Read**: Read file content.
-3. **Update**: Update file and folder content.
-4. **Delete**: Delete files and folders.
-5. **List**: List files and folders from a directory.
-6. **Info**: Get additional file information.
-7. **Clients [50]**: Directory mounting, reading, writing, retrieving file information, creating, deleting files and folders, and copying files/directories between storage servers.
-8. **Other Features**: Support for multiple clients.
+ThreadIt is a social media platform inspired by Reddit, implemented using the MERN stack. It offers a variety of functionalities that allow users to connect, share content, and moderate communities.
 
-## SS File Structure
+## Features
 
-- **SS_Root_0**: Files/Folders
-- **SS_Root_1**: Files/Folders
+1. **User Registration**: 
+   - Register with your details. Ensure that the contact number and age are numeric, while other fields are text.
 
-## Format
+2. **Login and Home Page**:
+   - After logging in, you will be directed to the home page where you can follow other users through the "More People to Follow" section.
 
-### Sending a Request
-- Include `requests.h` from Common folder.
-- Use `send_<request_type>_request` function.
+3. **Subgreddit Creation**:
+   - Create a new subgreddit with moderator privileges.
 
-### Receiving a Request
-- Include `requests.h` from Common folder.
-- Create a Request object.
-- Use `receive_request` function.
-- Use `request_type` attribute to determine request type and get corresponding content.
+4. **Join Subgreddit**:
+   - Request to join other subgreddits. Upon acceptance, you can view posts, reports, user lists, stats, and requests. You can also create posts, upvote, downvote, and comment.
 
-### Sending a Response
-- Include `responses.h` from Common folder.
-- Use `send_response` function.
+5. **Leave Subgreddit**:
+   - You can leave a subgreddit at any time. However, once left, you cannot request to join again. You will still be able to view posts, reports, user lists, stats, and requests.
 
-### Receiving a Response
-- Include `responses.h` from Common folder.
-- Use `receive_response` function.
+6. **Explore Subgreddits**:
+   - View all subgreddits under the "All SubGReddit" tab. Search by name or description (with fuzzy search enabled) and sort them as needed. Navigate to their home pages via the "view" option.
 
-### Request and Response Format
-- Each request has a header.
-- **Header Format**:
-  - Request/Response Type: 1 byte (char)
-  - Payload Length: 8 bytes (uint64_t)
-- After the header, the payload follows.
+7. **Post Interactions**:
+   - Comment on posts if you are a moderator or member.
+   - Save posts for future reference.
 
-### Example
-- Creating a file `a.txt`:
-  - Header: `type='C', length=5`
-  - Payload: `"a.txt"`
+8. **User Reports**:
+   - Report other users. As a moderator, you have the option to ignore the report, block the user, or delete the post.
 
-### Project Description
-- For more details, visit: [Project Description](https://karthikv1392.github.io/cs3301_osn/project/)
+9. **Statistics**:
+   - View various statistics related to the subgreddit and user activity.
+
+10. **Dependencies**:
+    - Some libraries may need to be installed, such as `bcrypt` and `jsonwebtoken`.
+
+## Getting Started
+
+### Running with Docker
+
+Ensure Docker is installed on your system.
+
+1. Build the Docker images:
+    ```bash
+    sudo docker-compose build
+    ```
+
+2. Start the application:
+    ```bash
+    sudo docker-compose up
+    ```
+
+3. The web app should now be running on `localhost:3000`.
+
+### Running Frontend and Backend Individually
+
+#### Frontend
+
+1. Navigate to the frontend directory:
+    ```bash
+    cd frontend
+    ```
+
+2. Install the required packages:
+    ```bash
+    npm install
+    ```
+
+3. Start the frontend server:
+    ```bash
+    npm start
+    ```
+
+#### Backend
+
+1. Navigate to the backend directory:
+    ```bash
+    cd backend
+    ```
+
+2. Install the required packages:
+    ```bash
+    npm install
+    ```
+
+3. Start the backend server:
+    ```bash
+    nodemon server.js
+    ```
+    - If `nodemon` is not installed, you can start the server with:
+    ```bash
+    node server.js
+    ```
+
+## Contributing
+
+If you'd like to contribute to ThreadIt, please fork the repository and use a feature branch. Pull requests are warmly welcome.
