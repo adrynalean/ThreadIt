@@ -14,17 +14,17 @@ ThreadIt is a social media platform inspired by Reddit, implemented using the ME
 2. **Login and Home Page**:
    - After logging in, you will be directed to the home page where you can follow other users through the "More People to Follow" section.
 
-3. **Subgreddit Creation**:
-   - Create a new subgreddit with moderator privileges.
+3. **Subthreadit Creation**:
+   - Create a new subthreadit with moderator privileges.
 
-4. **Join Subgreddit**:
-   - Request to join other subgreddits. Upon acceptance, you can view posts, reports, user lists, stats, and requests. You can also create posts, upvote, downvote, and comment.
+4. **Join Subthreadit**:
+   - Request to join other subthreadits. Upon acceptance, you can view posts, reports, user lists, stats, and requests. You can also create posts, upvote, downvote, and comment.
 
-5. **Leave Subgreddit**:
-   - You can leave a subgreddit at any time. However, once left, you cannot request to join again. You will still be able to view posts, reports, user lists, stats, and requests.
+5. **Leave Subthreadit**:
+   - You can leave a subthreadit at any time. However, once left, you cannot request to join again. You will still be able to view posts, reports, user lists, stats, and requests.
 
-6. **Explore Subgreddits**:
-   - View all subgreddits under the "All SubGReddit" tab. Search by name or description (with fuzzy search enabled) and sort them as needed. Navigate to their home pages via the "view" option.
+6. **Explore Subthreadits**:
+   - View all subthreadits under the "All SubGReadit" tab. Search by name or description (with fuzzy search enabled) and sort them as needed. Navigate to their home pages via the "view" option.
 
 7. **Post Interactions**:
    - Comment on posts if you are a moderator or member.
@@ -34,7 +34,7 @@ ThreadIt is a social media platform inspired by Reddit, implemented using the ME
    - Report other users. As a moderator, you have the option to ignore the report, block the user, or delete the post.
 
 9. **Statistics**:
-   - View various statistics related to the subgreddit and user activity.
+   - View various statistics related to the subthreadit and user activity.
 
 10. **Dependencies**:
     - Some libraries may need to be installed, such as `bcrypt` and `jsonwebtoken`.
